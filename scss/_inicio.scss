@@ -145,11 +145,10 @@ header {
     transform: scale(0.95);
 }
 
-//GALERIA DE IMAGENES GRID//
+//GALERIA DE IMAGENES GRID// //PRIMERA SECTION//
 
-.section-uno {
-    background-color: $color7-blanco;
-    padding-bottom: 60px;
+.main-content {
+    background-color: $color6-blanco;
 
 
 
@@ -177,7 +176,6 @@ header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        grid-auto-rows: auto;
 
         .img-grid img {
             width: 100%;
@@ -195,3 +193,75 @@ header {
 
     }
 }
+
+//CARDS// //SEGUNDA SECTION//
+
+.content--card{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 30px 60px 80px 30px;
+}
+
+.content--card--logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border: 2px solid $color5-blanco;
+    border-radius: 10px;
+    padding: 15px 0;
+
+}
+
+.content--card--logo i{
+    font-size: 25px;
+    color: $color2-blanco;
+
+}
+
+.content--card--text{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content--card--text span{
+    font-weight: 700;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+}
+
+.content--card--text p {
+    color: $color4-blanco;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
