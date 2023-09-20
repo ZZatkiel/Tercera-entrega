@@ -1,0 +1,126 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Heebo&family=Montserrat:ital,wght@0,500;1,500&family=Nunito+Sans:opsz,wght@6..12,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  background-image: url("../img/postres-fondo-inicio.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+header .conteiner--navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  font-weight: lighter;
+}
+header .conteiner--navbar .logo {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+header .conteiner--navbar .logo a {
+  text-decoration: none;
+  color: #cfcfcf;
+}
+header .conteiner--navbar .navbar li {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+}
+header .conteiner--navbar .navbar li #product {
+  cursor: default;
+}
+header .conteiner--navbar .navbar li a {
+  display: inline-block;
+  color: #cfcfcf;
+  text-decoration: none;
+  padding: 15px 30px 15px 30px;
+  position: relative;
+  /* Agrega una transición a ::after */
+}
+header .conteiner--navbar .navbar li a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 80%;
+  width: 100%;
+  height: 2px;
+  border-radius: 100px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+header .conteiner--navbar .navbar li a:hover::after {
+  transform: scaleX(0.8);
+}
+header .conteiner--navbar .navbar li a:hover {
+  color: #a5a5a5;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown--menu {
+  display: none;
+  position: absolute;
+  left: 5px;
+}
+.dropdown--menu a {
+  display: inline-block;
+  width: 142px;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown--menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.content--banner {
+  margin: 0 auto;
+  padding: 20rem 20rem;
+}
+
+.content--banner p {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.1rem;
+}
+
+.content--banner h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+}
+
+.content--banner button {
+  background-color: #b3956d;
+  border-radius: 3rem;
+  border: none;
+  margin: 25px -5px;
+  transition: all 0.4s ease;
+}
+
+.content--banner button a {
+  display: inline-block;
+  padding: 12px 35px;
+  color: #fafafa;
+  text-decoration: none;
+}
+
+.content--banner button:hover {
+  background-color: #897253;
+  transform: scale(0.95);
+}
+
+/*# sourceMappingURL=estilo.css.map */
