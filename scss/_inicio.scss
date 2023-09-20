@@ -52,7 +52,6 @@ header {
                 padding: 15px 30px 15px 30px;
                 position: relative;
 
-                /* Agrega una transición a ::after */
                 &::after {
                     content: "";
                     position: absolute;
@@ -71,7 +70,7 @@ header {
                     transform: scaleX(0.8);
                 }
 
-                &:hover{
+                &:hover {
                     color: $color4-blanco;
                 }
 
@@ -144,4 +143,55 @@ header {
 .content--banner button:hover {
     background-color: $color3-marron;
     transform: scale(0.95);
+}
+
+//GALERIA DE IMAGENES GRID//
+
+.section-uno {
+    background-color: $color7-blanco;
+    padding-bottom: 60px;
+
+
+
+    .text-grid {
+        text-align: center;
+        font-size: 25px;
+        padding-top: 50px;
+        position: relative;
+        color: $color2-blanco;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 40%;
+            top: 100%;
+            width: 20%;
+            height: 2px;
+            border-radius: 100px;
+            background-color: $color5-blanco;
+        }
+    }
+
+    .conteiner-img-grid {
+        margin: 25px 80px 60px 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        grid-auto-rows: auto;
+
+        .img-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .img-grid:nth-child(1) {
+            grid-column-start: span 2;
+        }
+
+        .img-grid:nth-child(4) {
+            grid-row-start: span 2;
+        }
+
+    }
 }
