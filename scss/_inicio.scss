@@ -6,7 +6,7 @@
 }
 
 
-body {
+.inicio {
     width: 100%;
     position: relative;
     padding-bottom: 250px;
@@ -16,7 +16,7 @@ body {
 
 //FONDO DE PANTALLA Y NAVBAR//
 
-header {
+#header--unico {
 
     background-image: $gradiant, url("../img/postres-fondo-inicio.jpg");
     background-position: center;
@@ -314,7 +314,7 @@ header {
 
 //FOOTER//
 
-footer {
+.inicio-footer {
     position: absolute;
     width: 100%;
     bottom: 0;
