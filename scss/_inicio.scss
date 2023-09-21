@@ -6,6 +6,14 @@
 }
 
 
+body {
+    width: 100%;
+    position: relative;
+    padding-bottom: 250px;
+    min-height: 100vh;
+}
+
+
 //FONDO DE PANTALLA Y NAVBAR//
 
 header {
@@ -240,7 +248,7 @@ header {
 //SLIDER// //TERCERA SECTION//
 
 
-#slider-text{
+#slider-text {
     text-align: center;
     font-size: 25px;
 }
@@ -255,11 +263,11 @@ header {
         display: flex;
         animation: cambio 12s infinite linear;
         width: 800%;
-    
+
         li {
             width: 12.5%;
             list-style: none;
-        
+
             img {
                 aspect-ratio: 21/9;
                 width: 100%;
@@ -271,15 +279,100 @@ header {
 }
 
 @keyframes cambio {
-    0% { margin-left: 0; }
-    20% { margin-left: 0; }
+    0% {
+        margin-left: 0;
+    }
 
-    25% { margin-left: -100%; }
-    45% { margin-left: -100%; }
+    20% {
+        margin-left: 0;
+    }
 
-    50% { margin-left: -200%; }
-    70% { margin-left: -200%; }
+    25% {
+        margin-left: -100%;
+    }
 
-    75% { margin-left: -300%; }
-    100% { margin-left: -300%; }
+    45% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    70% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: -300%;
+    }
+}
+
+//FOOTER//
+
+footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    background-color: $color1-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .social-icons-conteiner,
+    .footer-menu-conteiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .social-icons {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border-radius: 1px solid $color7-blanco;
+            color: $color7-blanco;
+            transition: $transition;
+
+            &:hover {
+                color: $color3-blanco;
+
+            }
+
+        }
+    }
+
+    .footer-menu-conteiner{
+    list-style-type: none;
+    color: $color7-blanco;
+    font-size: 18px;
+    }
+
+    .menu-item{
+        margin: 1rem 1.5rem;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: $transition;
+
+        &:hover{
+            opacity: 1;
+        }
+    }
+
+    .copyright{
+        color: $color7-blanco;
+        opacity: 0.3;
+        text-align: center;
+    }
+
+
+
 }
