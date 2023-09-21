@@ -1,0 +1,254 @@
+//FONDO DE PANTALLA Y NAVBAR//
+
+.productos {
+    width: 100%;
+    position: relative;
+    padding-bottom: 800px;
+    min-height: 100vh;
+    background-color: $color5-blanco;
+}
+
+header {
+    background-color: $color5-blanco;
+    height: 100vh;
+    width: 100%;
+
+    .conteiner--navbar--multi {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px;
+        font-weight: lighter;
+        width: 100%;
+        background-color: $color1-blanco;
+
+        .logo {
+            font-size: 40px;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+
+            a {
+                text-decoration: none;
+                color: $color5-blanco;
+            }
+        }
+
+        .navbar li {
+            display: inline-block;
+            list-style: none;
+            font-size: 18px;
+
+            #product {
+                cursor: default;
+
+            }
+
+            a {
+                display: inline-block;
+                color: $color7-blanco;
+                text-decoration: none;
+                padding: 15px 30px 15px 30px;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 0;
+                    top: 80%;
+                    width: 100%;
+                    height: 2px;
+                    border-radius: 100px;
+                    background-color: black;
+                    transform: scaleX(0);
+                    transform-origin: center;
+                    transition: transform 0.5s ease;
+                }
+
+                &:hover::after {
+                    transform: scaleX(0.8);
+                }
+
+                &:hover {
+                    color: $color4-blanco;
+                }
+
+            }
+        }
+    }
+}
+
+//SUBMENU DE PRODUCTOS//
+
+.dropdown {
+    position: relative;
+
+}
+
+.dropdown--menu {
+    display: none;
+    position: absolute;
+    left: 5px;
+
+
+    a {
+        display: inline-block;
+        width: 142px;
+        text-align: center;
+
+    }
+}
+
+.dropdown:hover .dropdown--menu {
+    display: flex;
+    flex-direction: column;
+}
+
+//MENU DE TORTAS//
+
+@mixin mixin-product {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 70px;
+}
+
+.product-text{
+    @include mixin-product;
+}
+
+.conteiner-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 5%;
+    margin-top: 2%;
+}
+
+.item {
+    border-radius: 10px;
+}
+
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.info-product {
+    padding: 15px 30px;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+}
+
+.item img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+    transition: $transition2;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.06);
+}
+
+.info-product {
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    background-color: $color5-blanco;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info-product a {
+    text-decoration: none;
+    background: $color0-blanco;
+    color: $color7-blanco;
+    padding: 15px 10px;
+    cursor: pointer;
+    width: 50%;
+    border-radius: 20px;
+    text-align: center;
+    transition: $transition2;
+}
+
+.info-product a:hover {
+    filter: invert(1);
+
+}
+
+
+//FOOTER//
+
+
+.productos--footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 40px;
+    background-color: $color1-blanco;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .social-icons-conteiner,
+    .footer-menu-conteiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        .social-icons {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            border-radius: 1px solid $color7-blanco;
+            color: $color7-blanco;
+            transition: $transition;
+
+            &:hover {
+                color: $color3-blanco;
+
+            }
+
+        }
+    }
+
+    .footer-menu-conteiner {
+        list-style-type: none;
+        color: $color7-blanco;
+        font-size: 18px;
+    }
+
+    .menu-item {
+        margin: 1rem 1.5rem;
+        cursor: pointer;
+        opacity: 0.6;
+        transition: $transition;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+    .copyright {
+        color: $color7-blanco;
+        opacity: 0.3;
+        text-align: center;
+    }
+
+
+
+}

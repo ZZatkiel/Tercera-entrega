@@ -2,6 +2,7 @@
 
 //COLOR-GAMA-BLANCA//
 
+$color0-blanco:#1b1b1b;
 $color1-blanco:#252525;
 $color2-blanco:#505050;
 $color3-blanco:#7a7a7a;
@@ -32,8 +33,11 @@ $color6-verde:#f2fdf4ff;
 //Transicisiones//
 
 $transition: all 0.4s ease;
+$transition2: all 0.6s ease;
+$transition3: all 1s ease;
+$transition4: all 1.5s ease;
+$transition5: all 2s ease;
 
 //Linear-Gradiant//
 
-$gradiant: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0))
-
+$gradiant: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
