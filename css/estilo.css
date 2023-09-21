@@ -311,6 +311,186 @@
   text-align: center;
 }
 
+.preguntas-frecuentes {
+  width: 100%;
+  position: relative;
+  padding-bottom: 240px;
+  min-height: 100vh;
+}
+
+header {
+  background-color: #cfcfcf;
+  height: 100vh;
+  width: 100%;
+}
+header .conteiner--navbar--multi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  font-weight: lighter;
+  width: 100%;
+  background-color: #252525;
+}
+header .conteiner--navbar--multi .logo {
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+}
+header .conteiner--navbar--multi .logo a {
+  text-decoration: none;
+  color: #cfcfcf;
+}
+header .conteiner--navbar--multi .navbar li {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+}
+header .conteiner--navbar--multi .navbar li #product {
+  cursor: default;
+}
+header .conteiner--navbar--multi .navbar li a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 15px 30px 15px 30px;
+  position: relative;
+}
+header .conteiner--navbar--multi .navbar li a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 80%;
+  width: 100%;
+  height: 2px;
+  border-radius: 100px;
+  background-color: black;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s ease;
+}
+header .conteiner--navbar--multi .navbar li a:hover::after {
+  transform: scaleX(0.8);
+}
+header .conteiner--navbar--multi .navbar li a:hover {
+  color: #a5a5a5;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown--menu {
+  display: none;
+  position: absolute;
+  left: 5px;
+}
+.dropdown--menu a {
+  display: inline-block;
+  width: 142px;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown--menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.contenedor-acordeon {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+  margin-top: 80px;
+}
+.contenedor-acordeon h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+.contenedor-acordeon .acordeon label {
+  display: block;
+  padding: 20px;
+  font-size: 20px;
+  background: #1c1c1c;
+  color: #fff;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+.contenedor-acordeon .acordeon label:hover {
+  background-color: #2e2e2e;
+}
+.contenedor-acordeon .contenido-acordeon p {
+  padding-left: 10px;
+}
+.contenedor-acordeon .acordeon .contenido-acordeon {
+  padding: 0px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: all 300ms ease;
+  background-color: #505050;
+  color: #cfcfcf;
+}
+.contenedor-acordeon .btn-acordeon:checked ~ .contenido-acordeon {
+  max-height: 600px;
+  padding: 15px 0px;
+}
+.contenedor-acordeon .btn-acordeon {
+  display: none;
+}
+
+.preguntas-frecuentes--footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 40px;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.preguntas-frecuentes--footer .social-icons-conteiner,
+.preguntas-frecuentes--footer .footer-menu-conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.preguntas-frecuentes--footer .social-icons-conteiner .social-icons,
+.preguntas-frecuentes--footer .footer-menu-conteiner .social-icons {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border-radius: 1px solid #ffffff;
+  color: #ffffff;
+  transition: all 0.4s ease;
+}
+.preguntas-frecuentes--footer .social-icons-conteiner .social-icons:hover,
+.preguntas-frecuentes--footer .footer-menu-conteiner .social-icons:hover {
+  color: #7a7a7a;
+}
+.preguntas-frecuentes--footer .footer-menu-conteiner {
+  list-style-type: none;
+  color: #ffffff;
+  font-size: 18px;
+}
+.preguntas-frecuentes--footer .menu-item {
+  margin: 1rem 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: all 0.4s ease;
+}
+.preguntas-frecuentes--footer .menu-item:hover {
+  opacity: 1;
+}
+.preguntas-frecuentes--footer .copyright {
+  color: #ffffff;
+  opacity: 0.3;
+  text-align: center;
+}
+
 .contacto {
   width: 100%;
   position: relative;
